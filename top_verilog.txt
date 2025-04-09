@@ -1,0 +1,21 @@
+module top(
+output wire sda_master,
+input ack_master,
+input [3:0] msg_master,
+input reset,
+input [3:0] msg_slave,
+input clk,
+output wire ack_slave,
+input sda_slave,
+input [3:0] address,
+output wire enable_master,
+output wire enable_slave,
+output wire scl_master,
+output wire scl_slave,
+input rw,
+input start,
+input stop
+);
+master uut(.start(start),.stop(stop),.address(address),.rw(rw),.clk(clk),.reset(reset),.enable(enable_master),.scl(scl_master),.sda(sda_master),.msg(msg_master),.ack(ack_master));
+slave  but(.ack(ack_slave),.scl(scl_slave),.reset(reset),.enable(enable_slave),.clk(clk),.msg(msg_slave));
+endmodule
