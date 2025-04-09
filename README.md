@@ -51,15 +51,6 @@ Load the Verilog files in a simulator like ModelSim, Xilinx Vivado, or Icarus Ve
 Run the testbenches to verify the I2C communication.
 Observe the SDA and SCL waveforms to validate data transmission.
 
-**How to Use**
-
-Clone the repository:
-
-git clone https://github.com/yourusername/I2C-Verilog.git
-Open the project in your Verilog simulator.
-Compile the files and run the testbenches.
-Analyze the waveform output.
-
 **Future Improvements**
 
 Support for multi-byte data transfer.
